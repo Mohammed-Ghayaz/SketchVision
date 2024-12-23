@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image to Sketch</title>
+    <title>SketchVision</title>
     <style>
         .sketch-img{
             height: auto;
@@ -20,7 +20,7 @@
             margin-bottom: 8px;
             border-radius: 8px;
             border-width: 1px;
-            width: max-content;
+            width: 18%;
             padding: 8px;
             font-size: large;
             text-decoration: none;
@@ -55,11 +55,13 @@
             </form>
         </div>
         {% if sketch_url %}
-            <h2>Your Sketch:</h2>
-            <img src="{{ sketch_url }}" alt="Sketch" class="sketch-img">
-            <a href="{{ sketch_url }}" class="mt-3 d-flex flex-row justify-content-center" download="sketch.png">
-                <button type="button" class="btn-danger mt-3">Download Sketch</button>
-            </a>
+            <div style="margin-top: 20px;">
+                <h2>Your Sketch:</h2>
+                <img src="{{ sketch_url }}" alt="Sketch" class="sketch-img">
+                <a href="{{ sketch_url }}" class="mt-3 d-flex flex-row justify-content-center" download="sketch.png">
+                    <button type="button" class="btn-danger mt-3">Download Sketch</button>
+                </a>
+            </div>
         {% endif %}
     </div>
 
